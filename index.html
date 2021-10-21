@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>CodingWeek Day2 Exercise-4</h1>
+    <h3>14. Write a JavaScript program to capitalize the first letter of each word of a given string.</h3>
+    <h1 id="result"></h1>
 </body>
+<script>
+    var str = prompt("Write a JavaScript program to capitalize the first letter of each word of a given string.","Type Your String")
+    function capital_letter(str) 
+{
+    str = str.split(" ");
+
+    for (var i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+var result = ("Result: "+capital_letter(str))
+document.getElementById("result").innerText = result
+//console.log(capital_letter("Write a JavaScript program to capitalize the first letter of each word of a given string."));
+
+</script>
 </html>
